@@ -1,0 +1,1 @@
+{"uuid":"328f6514-2e8a-4240-a169-832d38712cfd","name":"DevqualityTest","children":["52c4f6c2-fd9e-4862-9551-3e2d31349e06","8d546748-0ad0-460e-a9ee-ab3272693750"],"befores":[{"name":"beforeAll","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1699699536798,"stop":1699699536818}],"afters":[],"start":1699699536724,"stop":1699699561671}

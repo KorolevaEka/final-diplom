@@ -1,0 +1,2 @@
+[2023-11-09T20:58:23.611Z] [SEVERE] https://alfabank.ru/api/v2/geo-facade/geo/ip?detect_ip=true - Failed to load resource: the server responded with a status of 404 (Not Found)
+[2023-11-09T20:58:25.095Z] [SEVERE] https://sentry.io/api/1726585/envelope/?sentry_key=514c9a56f23d47f689f986e96101b85a&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.54.0 - Failed to load resource: the server responded with a status of 429 ()

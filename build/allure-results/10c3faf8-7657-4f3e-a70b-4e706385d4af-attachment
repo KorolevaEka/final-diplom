@@ -1,0 +1,4 @@
+[2023-11-09T21:08:40.536Z] [WARNING] chrome-error://chromewebdata/ 6773:10 "crbug/1173575, non-JS module files deprecated."
+[2023-11-09T21:08:43.826Z] [WARNING] chrome-error://chromewebdata/ 6773:10 "crbug/1173575, non-JS module files deprecated."
+[2023-11-09T21:08:45.010Z] [WARNING] chrome-error://chromewebdata/ 6773:10 "crbug/1173575, non-JS module files deprecated."
+[2023-11-09T21:08:47.348Z] [SEVERE] https://alfabank.ru/api/v2/geo-facade/geo/ip?detect_ip=true - Failed to load resource: the server responded with a status of 404 (Not Found)

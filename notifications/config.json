@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "qa.guru-HW16-telegram",
+    "environment": "PREPROD",
+    "comment": "",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6176331572:AAEY9k0NiErT_KkUEAHmXyBLMT-B8NQbEP4",
+    "chat": "-1002113402955",
+    "replyTo": ""
+  }
+}
