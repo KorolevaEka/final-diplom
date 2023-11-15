@@ -20,8 +20,8 @@ public class TestBase {
     @BeforeAll
     static  void beforeAll() {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://devquality.ru/en/");
-//        Configuration.browser =  System.getProperty("browser", "chrome");
-//        Configuration.browserVersion = System.getProperty("browser_version", "100.0");
+        Configuration.browser =  System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browser_version", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url","selenoid.autotests.cloud/wd/hub");
 

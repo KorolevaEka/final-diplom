@@ -38,8 +38,41 @@ public class DevqualityTest extends TestBase {
         });
 
         step("automationLabel", () -> {
-            devqualityPage.setTextAutomation("Test automation");
+            devqualityPage.setTextAutomation("Automated Testing");
+        });
+    }
+    @DisplayName("Search partners site")
+    @Test
+    void searchPartnerSite() {
+        step("Open form devquality", () -> {
+            devqualityPage.openPage();
+        });
+
+        step("partner page", () -> {
+            devqualityPage.linkGrabr();
+        });
+    }
+    @DisplayName("Search partners in header")
+    @Test
+    void searchPartnersInHeader() {
+        step("Open form devquality", () -> {
+            devqualityPage.openPage();
+        });
+
+        step("partners in header", () -> {
+            devqualityPage.linkHeader();
         });
     }
 
+    @DisplayName("Search for button More")
+    @Test
+    void searchButtonMore() {
+        step("Open form devquality", () -> {
+            devqualityPage.openPage();
+        });
+
+        step("button more", () -> {
+            devqualityPage.setButtonMore();
+        });
+    }
 }

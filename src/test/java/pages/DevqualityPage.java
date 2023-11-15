@@ -12,7 +12,12 @@ public class DevqualityPage {
             about = $x("//h2[text()='About us']"),
             guarantee = $x("//h2[text()='We guarantee']"),
             projects = $x("//h2[text()='Projects']"),
-            automationLabel = $x("//div[text()='Automated Testing']");
+            automationLabel = $x("//div[text()='Automated Testing']"),
+            grabrButton = $x("//a[@data-slick-index='2']//img[@class='header__img']"),
+            grabrPage = $x("//h1[text()='Shop Anywhere, Travel Everywhere']"),
+            header = $x("//header"),
+            buttonMore = $x("//div[@class='btn-more__arrows']");
+
 
 
 
@@ -30,7 +35,7 @@ public class DevqualityPage {
         return this;
     }
     public DevqualityPage setTextProjects() {
-        projects.shouldNotBe(visible);
+        projects.shouldBe(visible);
         return this;
     }
 
@@ -38,6 +43,19 @@ public class DevqualityPage {
         automationLabel.shouldHave(text(value));
         return this;
     }
+    public DevqualityPage linkGrabr() {
+        grabrButton.click();
+        grabrPage.shouldBe(visible);
+        return this;
+    }
 
+    public DevqualityPage linkHeader() {
+        header.shouldHave(text("Our partners")).click();
+        return this;
+    }
 
+    public DevqualityPage setButtonMore() {
+        buttonMore.click();
+        return this;
+    }
 }
