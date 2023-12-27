@@ -1,16 +1,15 @@
 plugins {
-    id 'java-library'
+    id 'java'
     id 'io.qameta.allure' version '2.11.2'
+    id 'io.freefair.lombok' version '8.0.1'
 }
 
 repositories {
     mavenCentral()
 }
 
-group 'guru.qa'
-version '1.0'
-
-def allureVersion = "2.21.0"
+def allureVersion = '2.23.0'
+def jacksonVersion = '2.15.2'
 
 allure {
     report {
@@ -26,43 +25,46 @@ allure {
     }
 }
 
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     testImplementation(
-            'com.codeborne:selenide:6.16.0',
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            'com.github.javafaker:javafaker:1.0.2',
+            'org.aeonbits.owner:owner:1.0.12',
+            'com.codeborne:selenide:6.19.1',
+            'io.rest-assured:rest-assured:5.3.1',
             'org.junit.jupiter:junit-jupiter:5.9.3',
-            'org.slf4j:slf4j-simple:2.0.9'
+            "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
+            "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}",
+            "io.qameta.allure:allure-rest-assured:${allureVersion}",
+            "io.qameta.allure:allure-selenide:${allureVersion}",
+            'com.github.javafaker:javafaker:1.0.2',
+            'org.assertj:assertj-core:3.24.2',
+            'net.lingala.zip4j:zip4j:2.11.5',
+            'org.slf4j:slf4j-simple:2.0.7',
+            'ru.yandex.qatools.ashot:ashot:1.5.4'
     )
 }
 
-tasks.withType(Test).configureEach {
+test {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
+    def threads = System.getProperty('threads', '2')
+    def maxPoolSize = System.getProperty('maxPoolSize', '2')
+
+    systemProperties.'junit.jupiter.execution.parallel.enabled' = 'true'
+    systemProperties.'junit.jupiter.execution.parallel.mode.default' = 'concurrent'
+    systemProperties.'junit.jupiter.execution.parallel.mode.classes.default' = 'concurrent'
+    systemProperties.'junit.jupiter.execution.parallel.config.strategy' = 'fixed'
+    systemProperties.'junit.jupiter.execution.parallel.config.fixed.max-pool-size' = maxPoolSize
+    systemProperties.'junit.jupiter.execution.parallel.config.fixed.parallelism' = threads.toInteger()
+
     testLogging {
         lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
+            events 'started', 'skipped', 'failed', 'standard_error', 'standard_out'
+            exceptionFormat 'short'
         }
     }
 }
-
-tasks.register('smoke', Test) {
-    testLogging {
-        events "passed", "skipped", "failed", "standardOut", "standardError"
-        exceptionFormat "full"
-    }
-    useJUnitPlatform {
-        includeTags("smoke")
-    }
-    }
-    tasks.register('regress', Test) {
-        testLogging {
-            events "passed", "skipped", "failed", "standardOut", "standardError"
-            exceptionFormat "full"
-        }
-        useJUnitPlatform {
-            includeTags("regress")
-        }
-    }
