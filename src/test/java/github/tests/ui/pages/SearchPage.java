@@ -4,6 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
 
 public class SearchPage {
 
@@ -13,7 +14,7 @@ public class SearchPage {
             searchLanguageDropdown = $("#search_language"),
             searchButton = $x("//button[@type='submit' and contains (text(),'Search')]");
     private final ElementsCollection searchResultContainer = $$x("//div[@data-testid='results-list']");
-
+    public SelenideElement resultList = $x("//div[@data-testid='results-list']");
     public SearchPage openAdvancedSearch(String urlSearchAdvanced) {
         open(urlSearchAdvanced);
         return this;
@@ -23,6 +24,10 @@ public class SearchPage {
         return searchResultContainer.stream().anyMatch(element -> element.text().contains(resultText));
     }
 
+    public SearchPage searchResults(String resultText) {
+        resultList.shouldHave(text(resultText));
+        return this;
+    }
     public SearchPage clickSearchLanguage() {
         searchLanguageDropdown.click();
         return this;
