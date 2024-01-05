@@ -35,8 +35,7 @@ public class SearchTest extends TestBase {
                         .setDataInSearch(testData.getSearchRepo()));
 
          step("Check search results", () ->
-                assertThat(searchPage.isSearchResultDisplayed(testData.getSearchResult())))
-                .isTrue();
+                searchPage.searchResults(testData.getSearchResult()));
     }
 
     @Test

@@ -8,9 +8,9 @@ public class TestData {
     private final String
             baseUrl = "https://github.com/",
             ownerName = System.getProperty("ownerName", "KorolevaEka"),
-            repoUnderTest = System.getProperty("repoUnderTest", "KorolevaEka/HW9_faker "),
-            searchRepo = System.getProperty("searchRepo", "KorolevaEka/HW9_faker "),
-            searchResult = System.getProperty("searchResult", "KorolevaEka/HW9_faker "),
+            repoUnderTest = System.getProperty("repoUnderTest", "KorolevaEka/HW9_faker"),
+            searchRepo = System.getProperty("searchRepo", "KorolevaEka/HW9_faker"),
+            searchResult = System.getProperty("searchResult", "KorolevaEka/HW9_faker"),
             advancedSearchLanguage = System.getProperty("advancedSearchLanguage", "Java"),
             advancedSearchFrom = System.getProperty("advancedSearchFrom", "KorolevaEka"),
             advancedSearchDate = System.getProperty("advancedSearchDate", "2023"),
