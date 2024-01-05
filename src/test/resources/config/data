@@ -1,0 +1,11 @@
+login.gitHub=aeon333@yandex.ru
+password.gitHub=fd5jnarw8x86iq3#!
+api.token.gitHub =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
+allureTestOps =allure8
+telegramBotToken=6176331572:AAEY9k0NiErT_KkUEAHmXyBLMT-B8NQbEP4
+selenoid.userName=user1
+selenoid.password=1234
+selenoid.remoteURL=selenoid.autotests.cloud
+ui.browserWithVersion=chrome,100.0
+ui.browserSize=1920x1080
+ui.baseURL=https://github.com/
