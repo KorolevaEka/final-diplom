@@ -3,7 +3,8 @@ package github.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/test.properties",
+        "classpath:config/data",
+        "system:properties"
 })
 public interface SelenoidConfig extends Config {
 

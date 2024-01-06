@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class TestData {
     private final String
-            baseUrl = "https://github.com/",
+            baseUrl = System.getProperty("baseUrl","https://github.com/"),
             ownerName = System.getProperty("ownerName", "KorolevaEka"),
             repoUnderTest = System.getProperty("repoUnderTest", "KorolevaEka/HW9_faker"),
             searchRepo = System.getProperty("searchRepo", "KorolevaEka/HW9_faker"),
@@ -14,8 +14,8 @@ public class TestData {
             advancedSearchLanguage = System.getProperty("advancedSearchLanguage", "Java"),
             advancedSearchFrom = System.getProperty("advancedSearchFrom", "KorolevaEka"),
             advancedSearchDate = System.getProperty("advancedSearchDate", "2023"),
-            urlSearchAdvanced = "https://github.com/search/advanced",
-            urlLoginPage = "https://github.com/login",
+            urlSearchAdvanced = baseUrl + "search/advanced",
+            urlLoginPage = baseUrl + "login",
             targetFileName = "README.md",
             negativeTargetFileName = "invalid_file.txt",
             pageTitle = "GitHub: Let’s build from here · GitHub";
