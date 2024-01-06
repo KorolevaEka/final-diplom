@@ -3,7 +3,7 @@ package github.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/data",
+        "classpath:config/test.properties",
         "system:properties"
 })
 public interface GitHubConfig extends Config {
