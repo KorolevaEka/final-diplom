@@ -1,6 +1,6 @@
 login.gitHub=aeon333@yandex.ru
 password.gitHub=fd5jnarw8x86iq3#!
-api.token.gitHub =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
+api.token.gitHub =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
 allureTestOps =allure8
 telegramBotToken=6176331572:AAEY9k0NiErT_KkUEAHmXyBLMT-B8NQbEP4
 selenoid.userName=user1
