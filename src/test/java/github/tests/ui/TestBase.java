@@ -37,7 +37,7 @@ public class TestBase {
 
         if (isRemote) {
             String remoteUrl = authSelenoidConfig.url();
-            Configuration.remote = "https://" + authSelenoidConfig.userName() + ":" + authSelenoidConfig.password() + "@" + remoteUrl + "/wd/hub";
+            Configuration.remote = "https://" + authSelenoidConfig.userName() + ":" + authSelenoidConfig.password() + "@" + authSelenoidConfig.url() + "/wd/hub";
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
