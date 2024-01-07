@@ -23,6 +23,7 @@ public class LoginTest extends TestBase {
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
+    @LocalTestExtensions.LocalTest
     @DisplayName("Login successful")
     void testSuccessfulLogin() {
         step("Open login page", () ->
