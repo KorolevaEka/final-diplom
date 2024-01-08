@@ -45,7 +45,6 @@ public class LoginTest extends TestBase {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @LocalTestExtensions.LocalTest
     @DisplayName("Login with incorrect email")
     void testLoginWithInvalidEmail() {
         step("Open login page", () ->
@@ -65,7 +64,6 @@ public class LoginTest extends TestBase {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @LocalTestExtensions.LocalTest
     @DisplayName("Login with incorrect password")
     void testLoginWithInvalidPassword() {
         step("Open login page", () ->

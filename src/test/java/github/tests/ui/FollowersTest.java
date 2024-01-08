@@ -19,6 +19,7 @@ public class FollowersTest extends TestBase {
 
     @Test
     @Severity(SeverityLevel.MINOR)
+    @LocalTestExtensions.LocalTest
     @DisplayName("Checking followers")
     void testFindFollower() {
         step("Open login page", () ->
