@@ -131,5 +131,5 @@ test
 
 
 <p align="center">
-  <img src="media/screens/video.gif">
+  <img src="media/screens/Testvideo.gif">
 </p>
