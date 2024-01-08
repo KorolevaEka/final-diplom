@@ -1,4 +1,4 @@
-# Проект по автоматизации тестовых сценариев для проекта [Devquality](https://devquality.ru/en/)
+# Дипломный проект по автоматизации тестовых сценариев с использованием UI и API тестов для [GitHub](https://github.com/)
 ##  Содержание:
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
@@ -23,14 +23,20 @@
 <a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="media/logo/Jenkins.svg" alt="Jenkins"></a>
 <a href="https://web.telegram.org/"><img width="6%" title="Telegram" src="media/logo/Telegram.svg" alt="Telegram"></a>
 <a href="https://www.atlassian.com/ru/software/jira"><img width="5%" title="Jira" src="media/logo/Jira.svg" alt="Jira"></a>
+<a href="https://rest-assured.io/"><img width="5%" title="Rest Assured" src="media/logo/RestAssured.svg" alt="Jira"></a>
 </p>
 
 - В данном проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования Selenide.
 - В качестве сборщика был использован - <code>Gradle</code>.
 - Использованы фреймворки <code>JUnit 5</code> и [Selenide](https://selenide.org/).
 - При прогоне тестов браузер запускается в [Selenoid](https://aerokube.com/selenoid/).
-- Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
+- Page Object шаблон проектирования.
+- Использование библиотеки Owner для легкости конфигурации.
+- Для удаленного запуска реализована сборка в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 - Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
+- Использование Lombok для моделей в API тестах.
+- Использована спецификация для API-тестов.
+- Применён allure rest-assured listener 
 
 Содержание Allure-отчета:
 * Шаги теста;
@@ -47,7 +53,7 @@ gradle clean test
 ```
 ### Запуск тестов на удаленном браузере
 ```
-gradle clean test -Denv=main
+gradle clean test -DisRemote=true
 ```
 При необходимости также можно переопределить параметры запуска
 
@@ -91,11 +97,16 @@ test
 ## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3755/dashboards)
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
-Результат выполнения автотестов отображается в <code>Allure TestOps</code>
+Результат выполнения автотестов отображается в <code>Allure TestOps</code>.
 На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
 
 <p align="center">
 <img title="Allure TestOps DashBoard" src="media/screens/allureAutotestCloud.png">
+</p>
+
+
+<p align="center">
+<img title="Allure TestOps DashBoard" src="media/screens/allureTestCases.png">
 </p>
 
 ## <img src="media/logo/Jira.svg" title="Jira" width="4%"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-934)
@@ -116,7 +127,7 @@ test
 
 ## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg">Видео примера запуска тестов в Selenoid
 
-К каждому тесту в отчете прилагается видео прогона.
+К UI тестам в отчете прилагается видео прогона.
 <p align="center">
-  <img title="Selenoid Video" src="/media/screens/video.gif">
+  <img title="Selenoid Video" src="/media/screens/Video.gif">
 </p>
