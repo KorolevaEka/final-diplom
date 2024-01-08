@@ -130,5 +130,5 @@ test
 К тестам в отчете прилагается видео прогона.
 
 <p align="center">
-  <img src="/media/screens/Video.gif">
+  <img src="media/screens/Video.gif">
 </p>
