@@ -8,8 +8,7 @@ public class CreationRepositoryRequest {
 
     private String name;
     private String description;
-    @JsonProperty("homepage")
-    private String homePage;
+    private String homepage;
     @JsonProperty("auto_init")
     private Boolean autoInit;
 }

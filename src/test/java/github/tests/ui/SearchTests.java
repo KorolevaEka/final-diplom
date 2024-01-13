@@ -1,6 +1,5 @@
 package github.tests.ui;
 
-import github.helpers.annotations.Blocker;
 import github.helpers.annotations.Critical;
 import github.tests.ui.pages.MainPage;
 import github.tests.ui.pages.SearchPage;
@@ -18,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("Search check")
 @Feature("UI: Search check")
 @DisplayName("Search check")
-public class SearchTest extends TestBase {
+public class SearchTests extends TestBase {
 
     private final MainPage mainPage = new MainPage();
     private final SearchPage searchPage = new SearchPage();

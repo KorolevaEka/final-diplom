@@ -13,7 +13,7 @@ import github.tests.api.models.PatchRepositoryRequest;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static github.tests.api.specs.Specification.*;
+import static github.tests.api.specs.Specifications.*;
 
 @Owner("KorolevaEka")
 @Epic("Renaming a repository")

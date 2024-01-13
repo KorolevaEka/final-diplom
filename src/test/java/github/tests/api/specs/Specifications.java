@@ -13,7 +13,7 @@ import static io.restassured.filter.log.LogDetail.STATUS;
 import static io.restassured.http.ContentType.JSON;
 import static github.helpers.CustomApiListener.withCustomTemplates;
 
-public class Specification {
+public class Specifications {
 
     public static RequestSpecification getRequestSpec() {
 

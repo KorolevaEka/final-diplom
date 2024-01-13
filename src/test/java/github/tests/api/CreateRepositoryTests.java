@@ -16,19 +16,19 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static github.tests.api.specs.Specification.*;
+import static github.tests.api.specs.Specifications.*;
 
 @Owner("KorolevaEka")
 @Epic("Create repository")
 @Feature("API: Create repository")
 @Execution(ExecutionMode.CONCURRENT)
 @DisplayName("Create repository")
-public class CreateRepositoryTest {
+public class CreateRepositoryTests {
 
     private final TestData testData = new TestData();
     private final RepositoryManager repositoryManager = new RepositoryManager();
     private final String createEndpoint = "user/repos";
-    protected String actualRepositoryName;
+    private String actualRepositoryName;
 
     @Test
     @DisplayName("Successful creation of the repository")

@@ -16,7 +16,7 @@ import static io.qameta.allure.Allure.step;
 @Epic("Authorization")
 @Feature("UI: Authorization")
 @DisplayName("Authorization")
-public class LoginTest extends TestBase {
+public class LoginTests extends TestBase {
 
     private final GitHubConfig gitHubConfig = ConfigurationManager.getGitHubConfig();
     private final LoginPage loginPage = new LoginPage();

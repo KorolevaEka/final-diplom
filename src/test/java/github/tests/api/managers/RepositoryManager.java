@@ -4,7 +4,7 @@ import github.data.TestData;
 import github.tests.api.models.CreationRepositoryRequest;
 
 import static io.restassured.RestAssured.given;
-import static github.tests.api.specs.Specification.getRequestSpec;
+import static github.tests.api.specs.Specifications.getRequestSpec;
 
 public class RepositoryManager {
 

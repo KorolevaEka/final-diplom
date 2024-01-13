@@ -12,7 +12,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import github.utils.ApiZipFileManager;
 
-import static github.tests.api.specs.Specification.*;
+import static github.tests.api.specs.Specifications.*;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("Reading and Downloading Repository Contents")
 @Feature("API: Reading and Downloading Repository Contents")
 @DisplayName("Reading and Downloading Repository Contents")
-public class RepositoryZipDownloadAndReadTest {
+public class RepositoryZipDownloadAndReadTests {
 
     private final ApiZipFileManager apiZipFileManager = new ApiZipFileManager();
     private final RepositoryManager repositoryManager = new RepositoryManager();
